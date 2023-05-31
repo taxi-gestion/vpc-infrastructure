@@ -8,6 +8,10 @@ locals {
       hcl   = false
       value = aws_route_table.public_route_table.id
     }
+    "private_route_table_id" = {
+      hcl   = false
+      value = aws_route_table.private_route_table.id
+    }
     "private_subnets_ids" = {
       hcl   = true
       value = [aws_subnet.private_1.id, aws_subnet.private_2.id]
